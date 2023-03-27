@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page-title %}My Curriculum Vitae{% endblock page-title%} 
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static "portfolio/page-detail.css" %}">
+{% endblock css_files %}
+
+{% block content %}
+
+    <section id="summary">
+        <h2>My Curriculum</h2>
+        <article>
+            <img src="{% static 'portfolio/images/cv.png' %}" alt="CV">
+            <address></address>
+            <div>
+                Last updated on <time>2020-05-01</time>
+            </div>
+        </article>
+    </section>
+
+    <main>
+        {% comment %} <div style="width: 100%; height: 100%"> {% endcomment %}
+        <embed src="{% static 'portfolio/cv.pdf' %}" height=1000 width=100% >
+        {% comment %} <img src="{% static 'portfolio/images/cv_scr.png' %}" alt="cv"> {% endcomment %}
+        {% comment %} </div> {% endcomment %}
+    </main>
+
+{% endblock content %}
+
+
+

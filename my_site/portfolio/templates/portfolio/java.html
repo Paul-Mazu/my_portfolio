@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page-title %}My Curriculum Vitae{% endblock page-title%} 
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static "portfolio/page-detail.css" %}">
+{% endblock css_files %}
+
+{% block content %}
+
+    <section id="summary">
+        <h2>Java bootcamp</h2>
+        <article>
+            <img src="{% static 'portfolio/images/java_logo.jpg' %}" alt="java_logo">
+            <address></address>
+            <div>
+                Last updated on <time>2023-03-21</time>
+            </div>
+        </article>
+    </section>
+
+    <main>
+        <p>Bla Bla Bla Java the best</p>
+        <img src="{% static 'portfolio/images/java.png' %}" alt="java_certificate">
+
+    </main>
+
+{% endblock content %}

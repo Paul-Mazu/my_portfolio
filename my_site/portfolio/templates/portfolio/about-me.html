@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page-title %}My Curriculum Vitae{% endblock page-title%} 
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static "portfolio/page-detail.css" %}">
+{% endblock css_files %}
+
+{% block content %}
+
+    <section id="summary">
+        <h2>Let's know me</h2>
+        <article>
+            <img src="{% static 'portfolio/images/oskar_in_air.jpg' %}" alt="me_with_son">
+            <address></address>
+            <div>
+                Last updated on <time>2023-03-21</time>
+            </div>
+        </article>
+    </section>
+
+    <main>
+        Hi there! My name is Pawel, and I am a passionate programmer and lifelong learner. I am happily married to my wonderful wife, and we have a son and a furry friend, a dog, who brings endless joy and love into our lives.
+
+        Programming is my passion, and I love the endless possibilities it offers for creating innovative and impactful solutions to real-world problems. Currently, I am honing my skills in Python, Django, and HTML through DCI course and other online learning platforms. I am constantly seeking out new challenges and opportunities to expand my knowledge and expertise in the field.
+        
+        In addition to programming, I am also passionate about health and wellness. I believe that a healthy body and mind are essential for achieving success and happiness in all areas of life. I enjoy exercising, biohacking, practicing healthy eating habits, and self-development. These practices help me stay energized, focused, and motivated to tackle new challenges and pursue my goals.
+        
+        I also enjoy reading books, playing football, and spending quality time with my son. One of the things I enjoy most about programming is the opportunity to collaborate and work in teams. I thrive in dynamic and diverse environments, where I can learn from others and contribute my own unique skills and perspectives. I am always eager to connect with like-minded individuals and build meaningful relationships that can help us all grow and succeed.
+
+        Lastly, I want to add that becoming a software developer has been a dream of mine for a long time, and I am grateful every day that my dream has become a reality. It has been a challenging journey, but I have learned that dividing big goals into smaller ones can make them more achievable. I hope that by sharing my story, I can inspire others to pursue their passions and never give up on their dreams.
+        
+        Overall, I am passionate about programming, personal growth, health and wellness, and building meaningful connections with others. I am excited about the future and all the exciting opportunities that lie ahead, and I look forward to sharing my journey with you!
+    </main>
+
+{% endblock content %}

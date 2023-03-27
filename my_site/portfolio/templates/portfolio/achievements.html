@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page-title %}My Curriculum Vitae{% endblock page-title%} 
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static "portfolio/achiev.css" %}">
+<link rel="stylesheet" href="{% static "portfolio/page-detail.css" %}">
+{% endblock css_files %}
+
+{% block content %}
+
+    <section id="summary">
+        <h2>My achievements</h2>
+        <article>
+            <img src="{% static 'portfolio/images/achievements.jpg' %}" alt="achievement">
+            <address></address>
+            <div>
+                Last updated on <time>2020-05-01</time>
+            </div>
+        </article>
+    </section>
+
+    <main>
+        <section id="latest">
+            <ul>
+                <li>
+                    <article class="post">
+                      <a href="{% url 'dci-page' %}">
+                        <img src="{% static "portfolio/images/dci_logo.png" %}" alt="dci_logo" />
+                        <div class="post__content">
+                          <h3>Digital Career Institute course</h3>
+                        </div>
+                      </a>
+                    </article>
+                </li>
+
+                <li>
+                    <article class="post">
+                      <a href="{% url 'java' %}">
+                        <img src="{% static "portfolio/images/java_logo.jpg" %}" alt="java_logo" />
+                        <div class="post__content">
+                          <h3>Java bootcamp</h3>
+                        </div>
+                      </a>
+                    </article>
+                </li>
+                <li>
+                    <article class="post">
+                        <a href="{% url 'python3' %}">
+                        <img src="{% static "portfolio/images/python_logo.jpg" %}" alt="python_logo" />
+                        <div class="post__content">
+                            <h3>Python course</h3>
+                        </div>
+                        </a>
+                    </article>
+                </li>
+                <li>
+                    <article class="post">
+                        <a href="{% url 'mysql' %}">
+                        <img src="{% static "portfolio/images/mysql_logo.png" %}" alt="mysql_logo" />
+                        <div class="post__content">
+                            <h3>MySQL course</h3>
+                        </div>
+                        </a>
+                    </article>
+                </li>
+                <li>
+                    <article class="post">
+                        <a href="{% url 'github' %}">
+                        <img src="{% static "portfolio/images/github_logo.png" %}" alt="github_logo" />
+                        <div class="post__content">
+                            <h3>GitHub course</h3>
+                        </div>
+                        </a>
+                    </article>
+                </li>
+                <li>
+                    <article class="post">
+                        <a href="{% url 'django-page' %}">
+                        <img src="{% static "portfolio/images/django_logo.png" %}" alt="github_logo" />
+                        <div class="post__content">
+                            <h3>Django course</h3>
+                        </div>
+                        </a>
+                    </article>
+                </li>
+            </ul>
+          </section>
+    </main>
+
+{% endblock content %}

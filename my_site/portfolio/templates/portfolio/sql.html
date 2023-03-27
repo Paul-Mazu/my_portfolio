@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page-title %}SQL bootcamp{% endblock page-title%} 
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static "portfolio/page-detail.css" %}">
+{% endblock css_files %}
+
+{% block content %}
+
+    <section id="summary">
+        <h2>MySQL bootcamp</h2>
+        <article>
+            <img src="{% static 'portfolio/images/mysql_logo.png' %}" alt="mysql_logo">
+            <address></address>
+            <div>
+                Last updated on <time>2023-03-21</time>
+            </div>
+        </article>
+    </section>
+
+    <main>
+        <p>Bla Bla Bla sql the best</p>
+        <img src="{% static 'portfolio/images/mysql.png' %}" alt="mysql_certificate">
+
+    </main>
+
+{% endblock content %}
