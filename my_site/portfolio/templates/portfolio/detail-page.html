@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page-title %}My Curriculum Vitae{% endblock page-title%} 
+{% block page-title %} {{ achievement.title }} {% endblock page-title%} 
 
 {% block css_files %}
 <link rel="stylesheet" href="{% static "portfolio/page-detail.css" %}">
@@ -10,9 +10,9 @@
 {% block content %}
 
     <section id="summary">
-        <h2>Java bootcamp</h2>
+        <h2>{{ achievement.title }}</h2>
         <article>
-            <img src="{% static 'portfolio/images/java_logo.jpg' %}" alt="java_logo">
+            <img src="{% static 'portfolio/images/'|add:achievement.logo %}" alt="{{achievement.title}}">
             <address></address>
             <div>
                 Last updated on <time>2023-03-21</time>
@@ -21,8 +21,8 @@
     </section>
 
     <main>
-        <p>Bla Bla Bla Java the best</p>
-        <img src="{% static 'portfolio/images/java.png' %}" alt="java_certificate">
+        <p>{{achievement.desc}}</p>
+        <img src="{% static 'portfolio/images/'|add:achievement.cert %}" alt="{{achievement.title}}">
 
     </main>
 

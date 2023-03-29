@@ -2,40 +2,12 @@
 
 <li>
     <article class="post">
-      <a href="{% url 'my-cv' %}">
-        <img src="{% static "portfolio/images/cv.png" %}" alt="My CV" />
+      <a href="{% url item.url %}">
+        <img src="{% static "portfolio/images/"|add:item.photo %}" alt="{{item.title}}" />
         <div class="post__content">
-          <h3>My Curriculum</h3>
+          <h3>{{item.title}}</h3>
           <p>
-            Brief overview of my carrier
-          </p>
-        </div>
-      </a>
-    </article>
-</li>
-
-<li>
-    <article class="post">
-      <a href="{% url 'about-me' %}">
-        <img src="{% static "portfolio/images/oskar_in_air.jpg" %}" alt="About me" />
-        <div class="post__content">
-          <h3>About me</h3>
-          <p>
-            Briefly about me
-          </p>
-        </div>
-      </a>
-    </article>
-</li>
-
-<li>
-    <article class="post">
-      <a href="{% url 'achievements' %}">
-        <img src="{% static "portfolio/images/achievements.jpg" %}" alt="achievements" />
-        <div class="post__content">
-          <h3>My achievements</h3>
-          <p>
-            Brief overview of my achievements
+            {{item.desc}}
           </p>
         </div>
       </a>
