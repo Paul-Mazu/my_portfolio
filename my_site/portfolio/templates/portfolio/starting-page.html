@@ -12,26 +12,41 @@
 
 <section id="welcome">
   <header>
-    <img src="{% static 'portfolio/images/pawel.jpg' %}" alt="Pawel - The author of this blog" />
+    <img src="{% static 'portfolio/images/pawel.jpg' %}" alt="Pawel - The author" />
     <h2>Pawel's Portfolio</h2>
   </header>
-  <p>Hi, let's pick the option: </p>
+  <p>Hi, let's get know me better, pick the option: </p>
 </section>
 
 <section id="latest-posts">
   <h2>About me: </h2>
   <ul>
-    {% include "portfolio/includes/post.html" %}
+    {% for item in main_menu %}
+      {% include "portfolio/includes/post.html" %}
+    {% endfor %}
   </ul>
 </section>
 
 <section id="about">
-  <h2>What I do</h2>
+  <h2>Hello and welcome!</h2>
   <p>
-    I love programming, I love to help others and I enjoy exploring new
-    technologies in general!
+  I am a student and tutor at the Digital Career Institute with a deep passion for programming.
   </p>
-  <p>My goal is to keep on growing as a developer!</p>
+  <p> 
+  Ever since I played the game "Colobot," where you had to program a robot to overcome challenges, I knew that programming was my calling. 
+  </p>
+  <p>
+  Today, I have the opportunity to learn and teach Python, Django, and SQL. 
+  </p>
+  <p>
+  I hope this page gives you a better understanding of who I am and what I'm passionate about.
+  </p>
+  <p>
+  If you're interested, you can check out the source code of this webpage at <a href="https://github.com/Paul-Mazu/my_portfolio">https://github.com/Paul-Mazu/my_portfolio</a>. 
+  </p>
+  <p>
+  My goal is to continue growing as a developer, and I'm excited for what the future holds.
+</p>
 </section>
 
 {% endblock content %}

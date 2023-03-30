@@ -1,0 +1,12 @@
+{% load static %}
+
+<li>
+    <article class="post">
+      <a href="{% url 'achievements-detail-page' achievement.slug %}">
+        <img src="{% static "portfolio/images/"|add:achievement.logo %}" alt="{{achievement.title}}" />
+        <div class="post__content">
+          <h3>{{achievement.title}}</h3>
+        </div>
+      </a>
+    </article>
+</li>
