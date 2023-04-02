@@ -12,17 +12,17 @@
     <section id="summary">
         <h2>{{ achievement.title }}</h2>
         <article>
-            <img src="{% static 'portfolio/images/'|add:achievement.logo %}" alt="{{achievement.title}}">
+            <img src="{% static 'portfolio/images/'|add:achievement.logo_name %}" alt="{{achievement.title}}">
             <address></address>
             <div>
-                Last updated on <time>2023-03-21</time>
+                Accomplished on <time>{{achievement.date}}</time>
             </div>
         </article>
     </section>
 
     <main>
-        <p>{{achievement.desc}}</p>
-        <img src="{% static 'portfolio/images/'|add:achievement.cert %}" alt="{{achievement.title}}">
+        <p>{{achievement.description}}</p>
+        <img src="{% static 'portfolio/images/'|add:achievement.certificate_name %}" alt="{{achievement.title}}">
 
     </main>
 
