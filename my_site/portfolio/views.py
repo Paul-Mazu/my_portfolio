@@ -20,7 +20,7 @@ def my_cv(request):
 
 
 def achievements_page(request):
-    achievements = Achievement.objects.all().order_by("date")
+    achievements = Achievement.objects.all().order_by("-date")
     return render(request, "portfolio/achievements.html", {
         'achievements': achievements
     })
@@ -28,8 +28,6 @@ def achievements_page(request):
 
 def detail_page(request, slug):
     identified_page = get_object_or_404(Achievement, slug=slug)
-    # identified_page = next(
-    #     achiev for achiev in achievements if achiev['slug'] == slug)
     return render(request, 'portfolio/detail-page.html', {
         'achievement': identified_page
     })
